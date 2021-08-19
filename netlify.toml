@@ -1,5 +1,10 @@
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "DENY"
+    X-Frame-Options = "ALLOW-FROM  https://*.salesforce.com/ https://*.koncert.com/ "
     X-XSS-Protection = "1; mode=block"
+	strict-transport-security = "max-age=31536000; includeSubDomains;"
+	Referrer-Policy = "origin-when-cross-origin"
+	Permissions-Policy = "*"
+	x-content-type-options = "nosniff"
+	Content-Security-Policy = "upgrade-insecure-requests"
